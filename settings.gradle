@@ -1,1 +1,1 @@
-include ':app', ':ormlitetest', ':jackson', ':gson', ':xutils', ':test1', ':baidu', ':customlistview', ':customview', ':qrcode'
+include ':app', ':ormlitetest', ':jackson', ':gson', ':xutils', ':test1', ':baidu', ':customlistview', ':customview', ':qrcode', ':socket', ':socket1'

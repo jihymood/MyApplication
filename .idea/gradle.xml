@@ -17,6 +17,8 @@
             <option value="$PROJECT_DIR$/jackson" />
             <option value="$PROJECT_DIR$/ormlitetest" />
             <option value="$PROJECT_DIR$/qrcode" />
+            <option value="$PROJECT_DIR$/socket" />
+            <option value="$PROJECT_DIR$/socket1" />
             <option value="$PROJECT_DIR$/test1" />
             <option value="$PROJECT_DIR$/xutils" />
           </set>
