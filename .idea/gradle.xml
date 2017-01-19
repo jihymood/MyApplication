@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baidu" />
+            <option value="$PROJECT_DIR$/bluetooth" />
             <option value="$PROJECT_DIR$/customlistview" />
             <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/gson" />
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/qrcode" />
             <option value="$PROJECT_DIR$/socket" />
             <option value="$PROJECT_DIR$/socket1" />
+            <option value="$PROJECT_DIR$/socket2" />
             <option value="$PROJECT_DIR$/test1" />
             <option value="$PROJECT_DIR$/xutils" />
           </set>
