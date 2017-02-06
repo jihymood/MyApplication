@@ -12,6 +12,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.socket2.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="取个名字"
+            android:text="Jack"
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="发送"/>
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/svChat"
         android:layout_width="match_parent"
@@ -73,31 +100,4 @@
                 android:textSize="13dp"/>
         </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/etName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:hint="取个名字"
-            android:text="Jack"
-            android:visibility="gone"
-            />
-
-        <EditText
-            android:id="@+id/etMessage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/btnSend"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="发送"/>
-    </LinearLayout>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.xpro.baidu;
+package com.example.canvas;
 
 import org.junit.Test;
 
@@ -10,17 +10,8 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
-
-    private static final String TAG = "ExampleUnitTest";
-
-
-    public void test() {
-        System.out.print("hhh");
-    }
-
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
-
 }

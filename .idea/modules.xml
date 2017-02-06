@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaiduLocationDemo/BaiduLocationDemo.iml" filepath="$PROJECT_DIR$/BaiduLocationDemo/BaiduLocationDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baidu/baidu.iml" filepath="$PROJECT_DIR$/baidu/baidu.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetooth/bluetooth.iml" filepath="$PROJECT_DIR$/bluetooth/bluetooth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/canvas/canvas.iml" filepath="$PROJECT_DIR$/canvas/canvas.iml" />
       <module fileurl="file://$PROJECT_DIR$/customlistview/customlistview.iml" filepath="$PROJECT_DIR$/customlistview/customlistview.iml" />
       <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />
       <module fileurl="file://$PROJECT_DIR$/gson/gson.iml" filepath="$PROJECT_DIR$/gson/gson.iml" />
       <module fileurl="file://$PROJECT_DIR$/jackson/jackson.iml" filepath="$PROJECT_DIR$/jackson/jackson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/ormlitetest/ormlitetest.iml" filepath="$PROJECT_DIR$/ormlitetest/ormlitetest.iml" />
       <module fileurl="file://$PROJECT_DIR$/qrcode/qrcode.iml" filepath="$PROJECT_DIR$/qrcode/qrcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket/socket.iml" filepath="$PROJECT_DIR$/socket/socket.iml" />

@@ -47,20 +47,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /* @Override
-     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-         super.onActivityResult(requestCode, resultCode, data);
-         if (resultCode==1) {
-             if (null!=data) {
-                 Bundle bundle = data.getExtras();
-                 if (null==bundle) {
-                     return;
-                 }
-                 bundle.getInt(Codeutils)
-             }
-         }
-     }
- */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);

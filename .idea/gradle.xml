@@ -9,13 +9,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/BaiduLocationDemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baidu" />
             <option value="$PROJECT_DIR$/bluetooth" />
+            <option value="$PROJECT_DIR$/canvas" />
             <option value="$PROJECT_DIR$/customlistview" />
             <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/gson" />
             <option value="$PROJECT_DIR$/jackson" />
+            <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/ormlitetest" />
             <option value="$PROJECT_DIR$/qrcode" />
             <option value="$PROJECT_DIR$/socket" />
