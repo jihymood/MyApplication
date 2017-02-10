@@ -1,6 +1,6 @@
 
-BaiduLocationDemo
-baidu
+BaiduLocationDemo＜/br＞
+baidu＜/br＞
 bluetooth蓝牙距离、uuid
 canvas绘图
 customlistview
