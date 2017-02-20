@@ -6,15 +6,15 @@ import com.j256.ormlite.table.DatabaseTable;
 /**
  * Created by huangjh on 2016/12/22 0022 19:50
  */
-
 @DatabaseTable(tableName = "user")
 public class User {
     @DatabaseField(generatedId = true)
     private int id;
-    @DatabaseField(columnName = "name")
-    private String name;
     @DatabaseField(columnName = "age")
     private int age;
+    @DatabaseField(columnName = "name")
+    private String name;
+
 
     public int getAge() {
         return age;
