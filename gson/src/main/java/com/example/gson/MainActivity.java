@@ -43,8 +43,10 @@ public class MainActivity extends AppCompatActivity {
 //        String url = "https://api.douban.com/v2/book/1220562";
         String url = "https://api.douban.com/v2/book/1220562";
         OkHttpClient okHttpClient = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(url).build();
+        Request request = new Request
+                .Builder()
+                .url(url)
+                .build();
         okHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -59,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Log.e(TAG, "onResponse:" + json);
-                        Gson gson=new Gson();
-                        book= gson.fromJson(json, Book.class);
+                        Gson gson = new Gson();
+                        book = gson.fromJson(json, Book.class);
                         text.setText(book.getSummary());
                     }
                 });
@@ -73,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
      * get请求并且fastjson解析
      */
     public void getHttpRequest() {
-        String url = "http://api.k780.com:88/?app=weather.future&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
+        String url = "http://api.k780.com:88/?app=weather" +
+                ".future&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
         OkHttpClient okHttpClient = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();
         okHttpClient.newCall(request).enqueue(new Callback() {
@@ -111,9 +114,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "hhdd", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, ShowDetailsActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("book",book);
-                Log.e(TAG, "book:"+book.toString());
-                intent.putExtra("bundle",bundle);
+                bundle.putParcelable("book", book);
+                Log.e(TAG, "book:" + book.toString());
+                intent.putExtra("bundle", bundle);
                 startActivity(intent);
                 break;
         }

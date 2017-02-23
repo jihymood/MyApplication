@@ -32,8 +32,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static android.R.attr.id;
-
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -95,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getHttpData() {
+
         String url = "https://api.douban.com/v2/book/1220562";
         OkHttpClient okHttpClient = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();

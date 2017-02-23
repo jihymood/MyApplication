@@ -68,13 +68,14 @@ public class NotificationService extends Service {
                     /**
                      * 这里setLatestEventInfo方法在API 11就开始不赞成使用，用Notification.Builder进行替代。
                      */
-//                    messageNotification.setLatestEventInfo(getApplicationContext(), "新消息", "您有新消息。" + serverMessage, messagePendingIntent);
-                    Notification notification = new Notification.Builder(getApplicationContext())
+//                    messageNotification.setLatestEventInfo(getApplicationContext(), "新消息", "您有新消息。" +
+// serverMessage, messagePendingIntent);
+                    Notification noti = new Notification.Builder(getApplicationContext())
                             .setContentTitle("您有新消息。")
                             .setContentText("新消息")
                             .setSmallIcon(R.mipmap.ic_launcher)
                             .build();
-                    messageNotificatioManager.notify(messageNotificationID, notification);
+                    messageNotificatioManager.notify(messageNotificationID, noti);
                     // 每次通知完，通知ID递增一下，避免消息覆盖掉
                     messageNotificationID++;
                 }

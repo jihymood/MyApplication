@@ -12,9 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />
       <module fileurl="file://$PROJECT_DIR$/gson/gson.iml" filepath="$PROJECT_DIR$/gson/gson.iml" />
       <module fileurl="file://$PROJECT_DIR$/jackson/jackson.iml" filepath="$PROJECT_DIR$/jackson/jackson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marquee/marquee.iml" filepath="$PROJECT_DIR$/marquee/marquee.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/ormlitetest/ormlitetest.iml" filepath="$PROJECT_DIR$/ormlitetest/ormlitetest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/qrcode/qrcode.iml" filepath="$PROJECT_DIR$/qrcode/qrcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket/socket.iml" filepath="$PROJECT_DIR$/socket/socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket1/socket1.iml" filepath="$PROJECT_DIR$/socket1/socket1.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket2/socket2.iml" filepath="$PROJECT_DIR$/socket2/socket2.iml" />

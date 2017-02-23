@@ -6,20 +6,17 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.ormlitetest.bean.User;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.logger.Log;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
-import java.io.File;
-import java.io.InputStream;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
 /**
  * Created by huangjh on 2016/12/22 0022 20:07
  */
 
 public class DaoHelper extends OrmLiteSqliteOpenHelper {
+
     private Dao<User, Integer> userDao;
     private static DaoHelper daoHelper;
 
