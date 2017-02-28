@@ -22,10 +22,10 @@ public class DaoHelper1 extends OrmLiteSqliteOpenHelper {
 
     /**
      * 重写DaoHelper1的构造方法
-     *
+     * 构造函数私有的，这样类就不提供默认的构造函数了
      * @param context
      */
-    public DaoHelper1(Context context) {
+    private DaoHelper1(Context context) {
         super(context, "shabi.db", null, 2);
     }
 

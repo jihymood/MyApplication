@@ -24,7 +24,8 @@ public class CustomTitleView extends View {
         Paint p = new Paint();
         p.setColor(Color.RED);// 设置红色
         p.setTextSize(30);
-        //drawText(String text, float x, floaty, Paint paint)  //渲染文本，Canvas类除了上面的还可以描绘文字，参数一是String类型的文本，参数二x轴，参数三y轴，参数四是Paint对象。
+        //drawText(String text, float x, floaty, Paint paint)
+        // 渲染文本，Canvas类除了上面的还可以描绘文字，参数一是String类型的文本，参数二x轴，参数三y轴，参数四是Paint对象。
         canvas.drawText("画圆：", 10, 60, p);// 画文本
         //drawCircle(float cx, float cy, float radius,Paint paint)// 绘制圆，参数一是中心点的x轴，参数二是中心点的y轴，参数三是半径，参数四是paint对象；
         canvas.drawCircle(150, 50, 20, p);// 小圆
@@ -33,12 +34,14 @@ public class CustomTitleView extends View {
         //**********************************************
         canvas.drawText("画线及弧线：", 10, 150, p);
         p.setColor(Color.GREEN);// 设置绿色
-        //drawLine(float startX, float startY, float stopX, float stopY, Paintpaint) //画线，参数一起始点的x轴位置，参数二起始点的y轴位置，参数三终点的x轴水平位置，参数四y轴垂直位置，最后一个参数为Paint 画刷对象。
+        //drawLine(float startX, float startY, float stopX, float stopY, Paintpaint)
+        // 画线，参数一起始点的x轴位置，参数二起始点的y轴位置，参数三终点的x轴水平位置，参数四y轴垂直位置，最后一个参数为Paint 画刷对象。
         canvas.drawLine(210, 160, 280, 80, p);// 画线
         canvas.drawLine(280, 80, 350, 160, p);// 斜线
         //画笑脸弧线
         p.setStyle(Paint.Style.STROKE);//设置空心
-        //RectF（）构造一个无参的矩形 RectF（float left,float top,float right,float bottom）构造一个指定了4个参数的矩形 RectF(Rect F r)根据指定的RectF对象来构造一个RectF对象
+        //RectF（）构造一个无参的矩形 RectF（float left,float top,float right,float bottom）构造一个指定了4个参数的矩形 RectF(Rect F r)
+        // 根据指定的RectF对象来构造一个RectF对象
         RectF oval1 = new RectF(380, 120, 410, 140);
         //drawArc(RectF oval, float startAngle, float sweepAngle, boolean useCenter, Paint paint)//画弧
         //参数一是RectF对象，一个矩形区域椭圆形的界限用于定义在形状、大小、电弧，参数二是起始角(度)在电弧的开始，
@@ -58,7 +61,8 @@ public class CustomTitleView extends View {
 
         canvas.drawText("画扇形和椭圆:", 10, 350, p);
         /* 设置渐变色 这个正方形的颜色是改变的 */
-        Shader mShader = new LinearGradient(0, 0, 100, 100, new int[]{Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.LTGRAY}, null, Shader.TileMode.REPEAT); // 一个材质,打造出一个线性梯度沿著一条线。
+        Shader mShader = new LinearGradient(0, 0, 100, 100, new int[]{Color.RED, Color.GREEN, Color.BLUE, Color
+                .YELLOW, Color.LTGRAY}, null, Shader.TileMode.REPEAT); // 一个材质,打造出一个线性梯度沿著一条线。
         p.setShader(mShader);
 
         // p.setColor(Color.BLUE);
