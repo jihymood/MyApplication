@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 //        jsonObjectRequest();
 //        imageRequest();
 //        imageLoder();
-        imageLoader1();
+//        imageLoader1();
+        imageLoader2();
     }
 
     public void stringRequest() {
@@ -114,11 +115,19 @@ public class MainActivity extends AppCompatActivity {
     public void imageLoader1() {
         String url = "http://img5.duitang.com/uploads/item/201406/17/20140617140412_JKnZU.thumb.700_0.jpeg";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        ImageLoader imageLoader = new ImageLoader(requestQueue,
-                new BitmapCache());
+        ImageLoader imageLoader = new ImageLoader(requestQueue, new BitmapCache());
         ImageLoader.ImageListener listener = ImageLoader.getImageListener(image,
                 R.mipmap.ic_launcher, R.mipmap.ic_launcher);
         imageLoader.get(url, listener, 200, 200);
+    }
+
+    public void imageLoader2() {
+        String url = "http://img5.duitang.com/uploads/item/201406/17/20140617140412_JKnZU.thumb.700_0.jpeg";
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        ImageLoader imageLoader = new ImageLoader(requestQueue, new ImageLruCache());
+        ImageLoader.ImageListener listener = ImageLoader.getImageListener(
+                image, R.mipmap.ic_launcher, R.mipmap.ic_launcher);
+        imageLoader.get(url, listener, 0, 0);
     }
 
 }

@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/socket1/socket1.iml" filepath="$PROJECT_DIR$/socket1/socket1.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket2/socket2.iml" filepath="$PROJECT_DIR$/socket2/socket2.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1/test1.iml" filepath="$PROJECT_DIR$/test1/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/xutils/xutils.iml" filepath="$PROJECT_DIR$/xutils/xutils.iml" />
     </modules>
   </component>
