@@ -12,12 +12,12 @@ import com.android.volley.toolbox.ImageLoader;
  */
 public class BitmapCache implements ImageLoader.ImageCache {
 
-    private LruCache<String, Bitmap> cache;
-
+    private LruCache<String, Bitmap> lruCache;
 
     public BitmapCache() {
-        int maxSize=10*1024*1024;
-        cache = new LruCache<String, Bitmap>(maxSize){
+//        int maxSize=10*1024*1024;
+        int maxSize = (int) (Runtime.getRuntime().maxMemory() / 8);
+        lruCache = new LruCache<String, Bitmap>(maxSize) {
             @Override
             protected int sizeOf(String key, Bitmap value) {
                 Log.e("MainActivity", value.getRowBytes() + "/" + value.getHeight());
@@ -28,11 +28,12 @@ public class BitmapCache implements ImageLoader.ImageCache {
 
     @Override
     public Bitmap getBitmap(String s) {
-        return cache.get(s);
+        return lruCache.get(s);
     }
 
     @Override
     public void putBitmap(String s, Bitmap bitmap) {
-        cache.put(s, bitmap);
+        lruCache.put(s, bitmap);
     }
+
 }
