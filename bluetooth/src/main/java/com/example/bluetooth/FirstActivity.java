@@ -28,6 +28,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -91,7 +92,6 @@ public class FirstActivity extends AppCompatActivity {
             long timestampNanos = result.getTimestampNanos();
 
 
-
             int startByte = 2;
             boolean patternFound = false;
             // 寻找ibeacon
@@ -111,7 +111,7 @@ public class FirstActivity extends AppCompatActivity {
 
             // 转换为16进制
             byte[] uuidBytes = new byte[16];
-//    System.arraycopy(scanRecord, startByte + 4, uuidBytes, 0, 16);
+//            byte[] uuidBytes = {12, 14, 0, -111, 70, 20, -18, -7, 58, 116, -8, -38, 63, 23, 4, -8};
             String hexString = bytesToHex(uuidBytes);
 
             // ibeacon的UUID值
@@ -149,6 +149,9 @@ public class FirstActivity extends AppCompatActivity {
         //BluetoothManager在Android4.3以上支持(API level 18)
         BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         bluetoothAdapter = bluetoothManager.getAdapter();
+        final String SPP_UUID = "00001101-0000-1000-8000-00805F9B34FB";
+        UUID uuid = UUID.fromString(SPP_UUID);
+        Log.e("FirstActivity", uuid.toString());
         requestEnable();
     }
 

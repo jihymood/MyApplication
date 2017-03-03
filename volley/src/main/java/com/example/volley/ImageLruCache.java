@@ -10,7 +10,9 @@ import com.android.volley.toolbox.ImageLoader;
  * Email：huangjihy@163.com
  */
 
-/** Lru算法的L1缓存实现类. */
+/**
+ * Lru算法的L1缓存实现类.
+ */
 public class ImageLruCache implements ImageLoader.ImageCache {
 
     private LruCache<String, Bitmap> mLruCache;
@@ -40,11 +42,11 @@ public class ImageLruCache implements ImageLoader.ImageCache {
 
     @Override
     public Bitmap getBitmap(String s) {
-        return null;
+        return mLruCache.get(s);
     }
 
     @Override
     public void putBitmap(String s, Bitmap bitmap) {
-
+        mLruCache.put(s, bitmap);
     }
 }

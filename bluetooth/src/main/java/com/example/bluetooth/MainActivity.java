@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     private BluetoothAdapter.LeScanCallback mLeScanCallback = new BluetoothAdapter.LeScanCallback() {
         @Override
         public void onLeScan(final BluetoothDevice device, final int rssi, final byte[] scanRecord) {
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             if (patternFound) {
                 // 转换为16进制
                 byte[] uuidBytes = new byte[16];
+                Log.e("BLE", "uuidBytes：" + uuidBytes);
                 System.arraycopy(scanRecord, startByte + 4, uuidBytes, 0, 16);
                 String hexString = bytesToHex(uuidBytes);
 

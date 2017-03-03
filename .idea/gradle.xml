@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/gson" />
             <option value="$PROJECT_DIR$/jackson" />
             <option value="$PROJECT_DIR$/marquee" />
+            <option value="$PROJECT_DIR$/mvptest" />
             <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/ormlitetest" />
             <option value="$PROJECT_DIR$/retrofit" />
