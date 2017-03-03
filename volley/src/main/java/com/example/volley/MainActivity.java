@@ -72,6 +72,26 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
     }
 
+    public void jsonObjectRequest1() {
+        String url = "http://api.k780.com:88/?app=weather" +
+                ".future&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url,
+                null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject jsonObject) {
+                Log.e("MainActivity", "jsonObject:" + jsonObject);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                Log.e("MainActivity", "volleyError:" + volleyError);
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+    }
+
+
     public void imageRequest() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = "http://img5.duitang.com/uploads/item/201406/17/20140617140412_JKnZU.thumb.700_0.jpeg";
@@ -128,6 +148,15 @@ public class MainActivity extends AppCompatActivity {
         ImageLoader.ImageListener listener = ImageLoader.getImageListener(
                 image, R.mipmap.ic_launcher, R.mipmap.ic_launcher);
         imageLoader.get(url, listener, 0, 0);
+    }
+
+    public void imageLoader3() {
+        String url = "http://img5.duitang.com/uploads/item/201406/17/20140617140412_JKnZU.thumb.700_0.jpeg";
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        ImageLoader imageLoader = new ImageLoader(requestQueue, new ImageLruCache());
+        ImageLoader.ImageListener imageListener = ImageLoader.getImageListener(image,
+                R.mipmap.ic_launcher, R.mipmap.ic_launcher);
+        imageLoader.get(url, imageListener, 0, 0);
     }
 
 }
