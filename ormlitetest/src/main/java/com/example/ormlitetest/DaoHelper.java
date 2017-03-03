@@ -2,6 +2,7 @@ package com.example.ormlitetest;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.ormlitetest.bean.User;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
@@ -24,12 +25,11 @@ public class DaoHelper extends OrmLiteSqliteOpenHelper {
         super(context, "mydatabase.db", null, 1);
     }
 
-
     @Override
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
         try {
             TableUtils.createTable(connectionSource, User.class);
-            android.util.Log.e("DaoHelper", "onCreate");
+            Log.e("DaoHelper", "onCreate");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -40,7 +40,7 @@ public class DaoHelper extends OrmLiteSqliteOpenHelper {
         try {
             TableUtils.dropTable(connectionSource, User.class, true);
             TableUtils.createTable(connectionSource, User.class);
-            android.util.Log.e("DaoHelper", "onUpgrade");
+            Log.e("DaoHelper", "onUpgrade");
         } catch (SQLException e) {
             e.printStackTrace();
         }

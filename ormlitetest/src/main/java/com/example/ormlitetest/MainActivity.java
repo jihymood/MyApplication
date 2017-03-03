@@ -1,18 +1,17 @@
 package com.example.ormlitetest;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.ormlitetest.bean.City;
+import com.example.ormlitetest.bean.Dog;
 import com.example.ormlitetest.bean.User;
 import com.example.ormlitetest.parse.CityParseEntity;
 import com.google.gson.Gson;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.DeleteBuilder;
 import com.j256.ormlite.stmt.UpdateBuilder;
-
-import org.json.JSONObject;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -23,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private DaoHelper daoHelper;
     private Dao<User, Integer> dao;
     private Dao<City, Integer> cityDao;
+    private Dao<Dog, Integer> dogDao;
     private DaoHelper1 daoHelper1;
 
     private String json = "{\"success\": \"true\", "
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             CityParseEntity entity = gson.fromJson(json, CityParseEntity.class);
             List<City> dataBeenList = entity.getBody().getData();
             for (int i = 0; i < dataBeenList.size(); i++) {
-                City dataBean=dataBeenList.get(i);
+                City dataBean = dataBeenList.get(i);
                 cityDao.createIfNotExists(dataBean);
             }
 
