@@ -1,7 +1,6 @@
 package com.xpro.xutils.database;
 
 import android.app.Application;
-import android.content.Context;
 
 import org.xutils.x;
 
@@ -20,9 +19,18 @@ public class MyApplication extends Application {
 
     }
 
-    public static synchronized MyApplication getInstance() {
+//    public static synchronized MyApplication getInstance() {
+//        if (myApplication == null) {
+//            myApplication = new MyApplication();
+//        }
+//        return myApplication;
+//    }
+
+    public static synchronized MyApplication getInstance1() {
         if (myApplication == null) {
-            myApplication = new MyApplication();
+            synchronized (MyApplication.class) {
+                myApplication = new MyApplication();
+            }
         }
         return myApplication;
     }
