@@ -21,6 +21,7 @@ public class SingleTon {
         return instance;
     }
 
+    /**/
     public static synchronized SingleTon getInstance1(){
         if (instance == null) {
             instance = new SingleTon();
@@ -28,8 +29,15 @@ public class SingleTon {
         return instance;
     }
 
+
     public static SingleTon getInstance2() {
-        if(instance)
+        if (instance == null) {
+            synchronized (SingleTon.class) {
+                if (instance == null) {
+                    instance = new SingleTon();
+                }
+            }
+        }
         return instance;
     }
 
