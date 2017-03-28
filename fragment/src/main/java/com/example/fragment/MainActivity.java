@@ -26,12 +26,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void replaceFragment1(Fragment framgment) {
-        FragmentManager manager=getSupportFragmentManager();
-        FragmentTransaction transaction=manager.beginTransaction();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.frame_layout, framgment);
         transaction.addToBackStack(null);
         transaction.commit();
 
+
+        FragmentManager manager1 = getSupportFragmentManager();
+        FragmentTransaction transaction1 = manager1.beginTransaction();
+        transaction1.replace(R.id.frame_layout, framgment);
+        transaction1.commit();
 
 //        manager.findFragmentById(R.id.)
     }

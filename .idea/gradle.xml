@@ -16,13 +16,14 @@
             <option value="$PROJECT_DIR$/canvas" />
             <option value="$PROJECT_DIR$/customlistview" />
             <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/database" />
+            <option value="$PROJECT_DIR$/fileread" />
             <option value="$PROJECT_DIR$/fragment" />
             <option value="$PROJECT_DIR$/gson" />
             <option value="$PROJECT_DIR$/jackson" />
             <option value="$PROJECT_DIR$/marquee" />
             <option value="$PROJECT_DIR$/mvptest" />
             <option value="$PROJECT_DIR$/notification" />
-            <option value="$PROJECT_DIR$/ormlitetest" />
             <option value="$PROJECT_DIR$/retrofit" />
             <option value="$PROJECT_DIR$/service" />
             <option value="$PROJECT_DIR$/socket" />

@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private MyAdapter adapter1;
     private List<Map<String, String>> list;
     private List<Person> list1;
-    private int[] icons = {R.mipmap.ic_launcher, R.mipmap.bus, R.mipmap.gzcbus, R.mipmap.trailerfree, R.mipmap.trailerbusy};
+    private int[] icons = {R.mipmap.ic_launcher, R.mipmap.bus, R.mipmap.gzcbus, R.mipmap.trailerfree, R.mipmap
+            .trailerbusy};
 
 
     @Override
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     public void getData1() {
         list1 = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            list1.add(new Person(icons[i],"等等"+i, "23" + i));
+            list1.add(new Person(icons[i], "等等" + i, "23" + i));
         }
     }
 
@@ -118,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
      * get请求并且fastjson解析
      */
     public void getHttpRequest() {
-        String url = "http://api.k780.com:88/?app=weather.future&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
+        String url = "http://api.k780.com:88/?app=weather" +
+                ".future&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
         OkHttpClient okHttpClient = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();
         okHttpClient.newCall(request).enqueue(new Callback() {
