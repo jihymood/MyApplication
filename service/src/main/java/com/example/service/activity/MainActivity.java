@@ -1,25 +1,31 @@
-package com.example.service;
+package com.example.service.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.service.BaseActivity;
+import com.example.service.R;
+import com.example.service.service.LongRunningService;
+import com.example.service.service.MyIntentService;
+import com.example.service.service.MyService;
+
 /**
  * 服务的用法，参考第一行代码
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button start_service, stop_service;
     private Button bindService;
     private Button unbindService;
     private Button startIntentService;
     private Button start_long_service;
+    private Button first;
     private MyService.DownloadBinder downloadBinder;
     private ServiceConnection connection = new ServiceConnection() {
         @Override
@@ -48,12 +54,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         unbindService = (Button) findViewById(R.id.unbind_service);
         startIntentService = (Button) findViewById(R.id.start_intent_service);
         start_long_service = (Button) findViewById(R.id.start_long_service);
+        first = (Button) findViewById(R.id.first);
         startIntentService.setOnClickListener(this);
         bindService.setOnClickListener(this);
         unbindService.setOnClickListener(this);
         start_service.setOnClickListener(this);
         stop_service.setOnClickListener(this);
         start_long_service.setOnClickListener(this);
+        first.setOnClickListener(this);
 
     }
 
@@ -84,6 +92,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.start_long_service:
                 Intent intent1 = new Intent(this, LongRunningService.class);
                 startService(intent1);
+                break;
+            case R.id.first:
+                Intent intent2 = new Intent(this, FirstActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

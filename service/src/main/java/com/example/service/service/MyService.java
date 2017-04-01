@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.service.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -48,7 +48,7 @@ public class MyService extends Service {
         return super.onUnbind(intent);
     }
 
-    class DownloadBinder extends Binder {
+    public class DownloadBinder extends Binder {
         public void startDownload() {
             Log.e("MyService", "startDownload");
         }

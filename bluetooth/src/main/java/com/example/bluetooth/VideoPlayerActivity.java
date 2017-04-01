@@ -33,6 +33,8 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VideoPlayerActivity extends Activity implements OnClickListener {
 
@@ -79,6 +81,18 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
         Log.e("videopath", "videopath:" + videopath);
         playVideo();
         setListener(); // 绑定相关事件
+
+        final List<String> list = new ArrayList<>();
+        list.add("http://www.zcycjy.com/coursePath/%E7%BB%A7%E7%BB%AD%E6%95%99%E8%82%B2/%E6%96%B0%E8%AF%BE%E7%A8%8B%E8%A7%86%E9%A2%91/%E2%80%9C%E8%90%A5%E6%94%B9%E5%A2%9E%E2%80%9D%E6%94%BF%E7%AD%96%E8%A7%A3%E8%AF%BB%E5%8F%8A%E4%BC%81%E4%B8%9A%E7%A8%8E%E5%8A%A1%E9%A3%8E%E9%99%A9%E4%B8%8E%E7%AD%B9%E5%88%92%E6%8E%A2%E8%AE%A81.mp4");
+        list.add("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (String urlStr : list) {
+                    save(urlStr);
+                }
+            }
+        }).start();
 
     }
 
@@ -207,7 +221,7 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
             super.run();
             try {
 
-                save();
+//                save();
 
                 mediaPlayer.reset(); // 回复播放器默认
 //				mediaPlayer.setDataSource(videoUrl); // 设置播放路径
@@ -486,15 +500,15 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
         return h + ":" + d + ":" + s;
     }
 
-
+    List<String> pathList = new ArrayList<>();
     String pathName;
-    public void save() {
+    public void save(String urlStr) {
         int byteSum = 0;
         int byteRead = 0;
 //        String urlStr = remoteUrl;
 //        String urlStr = "http://61.155.108.56:19999/businspection/userfiles/18f3821417e540f0a1c12a48a022043f/files/20160826110712_622.mp4";
 //        String urlStr = "http://www.zcycjy.com/coursePath/%E7%BB%A7%E7%BB%AD%E6%95%99%E8%82%B2/%E6%96%B0%E8%AF%BE%E7%A8%8B%E8%A7%86%E9%A2%91/%E2%80%9C%E8%90%A5%E6%94%B9%E5%A2%9E%E2%80%9D%E6%94%BF%E7%AD%96%E8%A7%A3%E8%AF%BB%E5%8F%8A%E4%BC%81%E4%B8%9A%E7%A8%8E%E5%8A%A1%E9%A3%8E%E9%99%A9%E4%B8%8E%E7%AD%B9%E5%88%92%E6%8E%A2%E8%AE%A81.mp4";
-        String urlStr = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+//        String urlStr = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
         String path = "bus";
 //        int a1 = path.lastIndexOf("/");
 //        String b = path.substring(a1 + 1);
@@ -533,6 +547,7 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
 //
 //            }
             pathName = SDCard + "/" + path + "/" + fileName;//SD卡文件存储路径
+            pathList.add(pathName);
             Log.i("pathName", "pathName:" + pathName);
             File file = new File(pathName);
             if (file.exists()) {
@@ -566,5 +581,6 @@ public class VideoPlayerActivity extends Activity implements OnClickListener {
             }
         }
     }
+
 
 }
