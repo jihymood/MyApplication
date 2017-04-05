@@ -42,12 +42,12 @@ public class MyService extends Service {
         Log.e("MyService", "onDestroy");
     }
 
+
     @Override
     public boolean onUnbind(Intent intent) {
-        Log.e("MyService", "onUnbind");
+        Log.e("MyService", "onUnBind");
         return super.onUnbind(intent);
     }
-
 
     public class DownloadBinder extends Binder{
         public void startDownload() {
