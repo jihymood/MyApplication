@@ -48,14 +48,14 @@ public class MyService extends Service {
         return super.onUnbind(intent);
     }
 
-    public class DownloadBinder extends Binder {
+
+    public class DownloadBinder extends Binder{
         public void startDownload() {
-            Log.e("MyService", "startDownload");
+            Log.e("DownloadBinder", "startDownload");
         }
 
         public void getProgress() {
-            Log.e("MyService", "getProgress");
+            Log.e("DownloadBinder", "getProgress");
         }
     }
-
 }

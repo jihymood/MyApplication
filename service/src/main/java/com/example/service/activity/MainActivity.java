@@ -26,12 +26,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button startIntentService;
     private Button start_long_service;
     private Button first;
+
     private MyService.DownloadBinder downloadBinder;
-    private ServiceConnection connection = new ServiceConnection() {
+    private ServiceConnection connection=new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Log.e("MyService", "onServiceConnected");
-            downloadBinder = (MyService.DownloadBinder) service;
+            downloadBinder= (MyService.DownloadBinder) service;
             downloadBinder.startDownload();
             downloadBinder.getProgress();
         }
@@ -41,7 +42,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             Log.e("MyService", "onServiceDisconnected");
         }
     };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

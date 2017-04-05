@@ -4,14 +4,12 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.service.ActivityUtils;
 
 import org.json.JSONObject;
 
@@ -65,9 +63,12 @@ public class ReliefTaskStateService extends Service {
                         @Override
                         public void onResponse(JSONObject jsonObject) {
                             Log.e("MainActivity", "jsonObject:" + jsonObject);
-                            Toast.makeText(ReliefTaskStateService.this, "jsonObject:" + jsonObject, Toast
-                                    .LENGTH_SHORT).show();
-                            ActivityUtils.finishActivity(); //结束所有的activity
+//                            Toast.makeText(ReliefTaskStateService.this, "jsonObject:" + jsonObject, Toast
+//                                    .LENGTH_SHORT).show();
+//                            ActivityUtils.finishActivity(); //结束所有的activity
+
+                            sendMsg(jsonObject.toString().trim());
+
                         }
                     }, new Response.ErrorListener() {
                 @Override
@@ -77,5 +78,12 @@ public class ReliefTaskStateService extends Service {
             });
             requestQueue.add(jsonObjectRequest);
         }
+    }
+
+    private void sendMsg(String msg) {
+        Intent intent = new Intent("com.zhanghao.msg");
+        intent.putExtra("msg", msg);
+//        intent.setAction("hhhhh");
+        this.sendBroadcast(intent);
     }
 }
