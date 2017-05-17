@@ -21,8 +21,8 @@ public class RetrofitUtils {
             }
             retrofit = new Retrofit.Builder()
                     .baseUrl(APP_SERVER)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+//                    .addConverterFactory(GsonConverterFactory.create())
+//                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .client(okHttpClient)
                     .build();
         }
