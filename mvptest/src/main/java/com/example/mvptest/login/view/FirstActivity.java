@@ -28,10 +28,11 @@ public class FirstActivity extends AppCompatActivity implements IView{
     @Override
     public void clear() {
 
+
     }
 
     @Override
     public void login(String name, String pwd) {
-
+        //IPresenter接口中login方法里又调用了IView接口的login方法，即这个类中的该方法
     }
 }
