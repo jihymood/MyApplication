@@ -1,4 +1,4 @@
-package com.example.mvptest.view;
+package com.example.mvptest.mvptest.view;
 
 /**
  * Created by huangjh on 2017/3/2 0002 17:28

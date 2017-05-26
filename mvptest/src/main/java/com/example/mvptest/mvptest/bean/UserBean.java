@@ -1,4 +1,4 @@
-package com.example.mvptest.bean;
+package com.example.mvptest.mvptest.bean;
 
 /**
  * Created by huangjh on 2017/3/2 0002 17:18

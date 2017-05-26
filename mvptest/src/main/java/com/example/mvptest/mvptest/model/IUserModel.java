@@ -1,6 +1,6 @@
-package com.example.mvptest.model;
+package com.example.mvptest.mvptest.model;
 
-import com.example.mvptest.bean.UserBean;
+import com.example.mvptest.mvptest.bean.UserBean;
 
 /**
  * Created by huangjh on 2017/3/2 0002 17:33

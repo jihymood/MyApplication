@@ -1,4 +1,4 @@
-package com.example.mvptest.view;
+package com.example.mvptest.mvptest.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.mvptest.R;
-import com.example.mvptest.presenter.UserPresenter;
+import com.example.mvptest.mvptest.presenter.IUserPresenter;
+import com.example.mvptest.mvptest.presenter.UserPresenterImpl;
 
 public class MainActivity extends AppCompatActivity implements IUserView, View.OnClickListener {
 
     private EditText mFirstNameEditText, mLastNameEditText, mIdEditText;
     private Button mSaveButton, mLoadButton;
-    private UserPresenter userPresenter;
+    private IUserPresenter userPresenterImpl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements IUserView, View.O
         mSaveButton.setOnClickListener(this);
         mLoadButton.setOnClickListener(this);
 
-        userPresenter = new UserPresenter(this);
+        userPresenterImpl = new UserPresenterImpl(this);
     }
 
 
@@ -62,10 +63,10 @@ public class MainActivity extends AppCompatActivity implements IUserView, View.O
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.saveButton:
-                userPresenter.savaUser(getId(), getFirstName(), getLastName());
+                userPresenterImpl.saveUser(getId(), getFirstName(), getLastName());
                 break;
             case R.id.loadButton:
-                userPresenter.loadUser(getId());
+                userPresenterImpl.loadUser(getId());
                 break;
         }
     }
