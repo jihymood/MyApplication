@@ -1,4 +1,6 @@
-package com.example.greedao;
+package com.example.greedao.api;
+
+import com.example.greedao.bean.Weather;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,9 +1,8 @@
-package com.example.greedao;
+package com.example.greedao.bean;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Keep;
-import org.greenrobot.greendao.annotation.Generated;
 
 /**
  * Created by HASEE on 2017/5/17 11:35

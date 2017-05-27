@@ -1,4 +1,4 @@
-package com.example.greedao;
+package com.example.greedao.db;
 
 import android.content.Context;
 

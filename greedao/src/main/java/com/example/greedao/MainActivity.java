@@ -7,6 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.greedao.api.BookService;
+import com.example.greedao.bean.Weather;
+import com.example.greedao.db.DBManager;
+import com.example.greedao.db.GreenDaoManager;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import retrofit2.Call;
