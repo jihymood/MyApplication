@@ -71,6 +71,9 @@ public class City {
         this.town = town;
     }
 
+    /**
+     * 必须要有无参构造函数
+     */
     public City() {
     }
 

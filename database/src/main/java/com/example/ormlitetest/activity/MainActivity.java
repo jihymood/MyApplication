@@ -64,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        deleteUser();
-
-        xiugaiUser();
-
-        queryUser();
+//        deleteUser();
+//
+//        xiugaiUser();
+//
+//        queryUser();
 
         insertCity();
 

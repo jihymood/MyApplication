@@ -66,4 +66,10 @@ public class Dog {
         this.height = height;
         this.sex = sex;
     }
+
+    /**
+     * 必须要有无参构造函数
+     */
+    public Dog() {
+    }
 }
