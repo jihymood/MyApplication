@@ -15,7 +15,7 @@ public class MyManager {
     private DaoMaster.DevOpenHelper helper;
     private DaoMaster daoMaster;
     private DaoSession daoSession;
-
+8
     public static MyManager getInstance(Context context) {
 
         if (instance == null) {

@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         myManager = MyManager.getInstance(this);
-
         personDao=myManager.getDaoSession().getPersonDao();
         personDao.insert(new Person("傻逼"));
 

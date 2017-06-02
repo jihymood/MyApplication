@@ -34,12 +34,7 @@ public class GreenDaoManager {
         return mDaoMaster;
     }
 
-    public DaoSession getSession() {
+    public DaoSession getDaoSession() {
         return mDaoSession;
     }
-
-//    public DaoSession getNewSession() {
-//        mDaoSession = mDaoMaster.newSession();
-//        return mDaoSession;
-//    }
 }
