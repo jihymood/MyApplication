@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".login.view.FirstActivity">
         </activity>
+        <activity android:name=".logincopy.view.SecondActivity">
+        </activity>
     </application>
 
 </manifest>

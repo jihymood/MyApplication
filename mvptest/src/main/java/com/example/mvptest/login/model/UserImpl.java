@@ -2,6 +2,7 @@ package com.example.mvptest.login.model;
 
 /**
  * Created by HASEE on 2017/5/25 14:21
+ * Model负责数据的处理和业务逻辑
  */
 
 public class UserImpl implements IUser {
@@ -9,9 +10,7 @@ public class UserImpl implements IUser {
     private String name;
     private String password;
 
-    public UserImpl(String name, String password) {
-        this.name = name;
-        this.password = password;
+    public UserImpl() {
     }
 
     @Override
@@ -30,5 +29,10 @@ public class UserImpl implements IUser {
             return -1;
         }
         return 0;
+    }
+
+    @Override
+    public void login(String name, String password) {
+
     }
 }

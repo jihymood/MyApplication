@@ -12,5 +12,7 @@ public interface IUser {
 
     int checkUserValidity(String name, String password);
 
+    void login(String name, String password);
+
 
 }

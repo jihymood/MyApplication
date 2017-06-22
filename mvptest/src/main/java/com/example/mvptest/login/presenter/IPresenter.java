@@ -6,7 +6,9 @@ package com.example.mvptest.login.presenter;
 
 public interface IPresenter {
 
-    void login();
+//    void login();
+
+    void login(String name,String pwd); //应该传入参数
 
     void clear();
 
